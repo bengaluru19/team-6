@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Bellota-LightItalic';
+	src: url('%PUBLIC_URL%/fonts/Bellota-LightItalic.otf');
+}
+@font-face {
+	font-family: 'Bellota-BoldItalic';
+	src: url('%PUBLIC_URL%/fonts/Bellota-BoldItalic.otf');
+}
+html, body {
+	height: 100%;
+	width:100%;
+}
+
+form {
+	text-align: center;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #3498db;
+}
