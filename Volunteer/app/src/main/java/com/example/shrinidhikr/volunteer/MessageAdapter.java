@@ -29,6 +29,7 @@ public class MessageAdapter extends ArrayAdapter<EventsData> {
         TextView status = (TextView) convertView.findViewById(R.id.status);
 
         EventsData ev = getItem(position);
+
         id.setText(ev.getId());
         name.setText(ev.getName());
         loc.setText(ev.getLocaddr());

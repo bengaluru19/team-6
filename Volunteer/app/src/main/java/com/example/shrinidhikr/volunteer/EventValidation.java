@@ -57,6 +57,7 @@ public class EventValidation extends Activity implements LocationListener {
                     Log.e("Lat",String.valueOf(latitude));
                     String result = "Latitude: " + gpsLocation.getLatitude() +
                             " Longitude: " + gpsLocation.getLongitude();
+
                     Toast.makeText(getApplicationContext(), result,
                             Toast.LENGTH_LONG).show();
                     Date c = Calendar.getInstance().getTime();
@@ -73,7 +74,7 @@ public class EventValidation extends Activity implements LocationListener {
                         postData.put("curr_date", formattedDate);
                         postData.put("curr_time", formattedtime);
                         new SendDeviceDetails().execute("http://13.250.22.136/location_track.php",postData.toString());
-                        //tvAddress.setText(sd.onPostExecute(sd.execute("http://13.250.22.136/location_track.php",postData.toString());
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -173,6 +174,7 @@ public class EventValidation extends Activity implements LocationListener {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+            tvAddress.setText("Volunteer validated at event");
             Log.e("TAG", result);
         }
     }
