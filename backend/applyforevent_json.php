@@ -1,7 +1,7 @@
 <?php
 	require 'connection.php';
 	$obj = new stdClass();
-	$obj->event_id = 1;
+	$obj->event_id = 6;
 	$obj->vol_id = 1;
 	$obj->status ="Applied";
 	
