@@ -1,5 +1,6 @@
 package com.example.shrinidhikr.volunteer;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -32,6 +33,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText user;
     EditText pass;
     TextView newuser;
+    SendDeviceDetails sd;
+    Intent i;
+    String data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +48,17 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                    i = new Intent(getApplicationContext(), NavigationActivity.class);
+                    startActivity(i);
+
+                //else{
+                   /* Toast.makeText(getApplicationContext(), "Check phone and password",
+                            Toast.LENGTH_LONG).show();
+                    Log.e("Not valid","no");*/
+                //}
+
                 JSONObject postData = new JSONObject();
                 try {
                     postData.put("phone", user.toString());
@@ -53,11 +68,6 @@ public class LoginActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-                Intent i = new Intent(getApplicationContext(),NavigationActivity.class);
-                startActivity(i);
-
-
             }
         });
 
@@ -110,6 +120,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
+
             Log.e("TAG", result);
         }
     }

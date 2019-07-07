@@ -13,10 +13,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ListView mMessageListView;
+    MessageAdapter evadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,11 @@ public class NavigationActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+/*        mMessageListView = (ListView) findViewById(R.id.messageListView);
+        List<EventsData> evd = new ArrayList<>();
+        evadapter = new MessageAdapter(this, R.layout.events_item, evd);
+        mMessageListView.setAdapter(evadapter);*/
     }
 
     @Override
@@ -77,8 +87,8 @@ public class NavigationActivity extends AppCompatActivity
             startActivity(i);
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-           /* Intent i = new Intent(getApplicationContext(),UserProfile.class);
-            startActivity(i);*/
+           Intent i = new Intent(getApplicationContext(),ListActivity.class);
+            startActivity(i);
 
         }
 
