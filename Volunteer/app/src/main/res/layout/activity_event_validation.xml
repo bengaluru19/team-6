@@ -10,6 +10,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/download1"
         tools:context=".MainActivity" >
 
         <Button
@@ -19,7 +20,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="162dp"
-            android:text="Show location" />
+            android:text="Event Validate" />
 
         <TextView
             android:id="@+id/textview1"
@@ -27,7 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Location here" />
+
+            android:text="Location here"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </RelativeLayout>
 
