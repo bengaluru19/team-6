@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/download1"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         tools:text="Name" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         tools:text="Event id" />
 
     <TextView
@@ -28,6 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
         android:text="loc" />
 
     <TextView
@@ -35,6 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
         android:text="status" />
 
     <TextView
@@ -42,6 +50,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
         android:text="dfrom" />
 
     <TextView
@@ -49,7 +59,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
         android:text="tfrom" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_vertical_margin"
+        android:layout_weight="0" />
 
 
 </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
+    android:background="@drawable/download1"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
@@ -21,5 +22,14 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_navigation"
         app:menu="@menu/activity_navigation_drawer" />
+
+    <!--<ListView-->
+        <!--android:id="@+id/messageListView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:stackFromBottom="true"-->
+        <!--android:divider="@android:color/transparent"-->
+        <!--android:transcriptMode="alwaysScroll"-->
+        <!--tools:listitem="@layout/events_item"/>-->
 
 </android.support.v4.widget.DrawerLayout>
